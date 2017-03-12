@@ -1,0 +1,45 @@
+{
+  "name": "lerp",
+  "description": "<h1 align=\"center\">Lib Name</h1> <h3 align=\"center\">Lib Description</h3>",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "NODE_ENV=production webpack -p --config ./webpack.production.config.js --progress --colors",
+    "start": "NODE_ENV=dev webpack-dev-server --watch -d --progress --colors"
+  },
+  "main": "build/lerp.min.js",
+  "author": "antoninlanglade",
+  "license": "MIT",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "raf": "github:pqml/raf"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3",
+    "webpack-node-externals": "^1.5.4",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-latest": "^6.16.0",
+    "file-loader": "^0.9.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-uglify-js-plugin": "^1.1.9",
+    "webpack-watch-livereload-plugin": "0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoninlanglade/lerp.git"
+  },
+  "keywords": [
+    "Lerp",
+    "Utils",
+    "Animation",
+    "ES6"
+  ],
+  "bugs": {
+    "url": "https://github.com/antoninlanglade/lerp/issues"
+  },
+  "homepage": "https://github.com/antoninlanglade/lerp#readme"
+}
