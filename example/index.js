@@ -6,7 +6,6 @@ const DOM = document.getElementById('test');
 let lerp = new Lerp({
     current : 0,
     target : 1,
-    ease : [0.065, 0.635, 0.880, 0.145],
     callback : () => {
         console.log('end');
     }

@@ -42,6 +42,10 @@ class Lerp {
     setCloneStart() {
         this._current = _.clone(this.current);
     }
+    
+    setSpeed(speed) {
+        this.speed = speed;
+    }
 
     dispatchOnce() {
         if (!this.once) {
