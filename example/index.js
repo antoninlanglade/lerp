@@ -3,27 +3,32 @@ const Lerp = require('../src/index.js');
 const DOM = document.getElementById('test');
 
 // Init Lerp
-let lerp = new Lerp({
+let lerpX = new Lerp({
     current : 0,
-    target : 1,
-    callback : () => {
-        console.log('end');
-    }
+    target : 0,
+    speed : 0.1
+});
+
+let lerpY = new Lerp({
+    current : 0,
+    target : 0,
+    speed : 0.1
 });
 
 // Update Lerp
 let update = () => {
-    lerp.update();
-    DOM.style.top = lerp.getCurrent() * 50 + '%'; 
+    lerpX.update();
+    lerpY.update();
+    DOM.style.left = lerpX.getCurrent() + "px";
+    DOM.style.top = lerpY.getCurrent() + "px";
 }
 
-let sign = 0;
-window.addEventListener('click', () => {
-    sign = (sign + 1) % 2;
-    // Change lerp target
-    lerp.setTarget(sign, () => {
-        console.log('end2');
+
+window.addEventListener('mousemove', (e) => {
+    lerpX.setTarget(e.pageX, () => {
+        console.log('e');
     }); 
+    lerpY.setTarget(e.pageY);
 });
 
 RAF.add(update);
