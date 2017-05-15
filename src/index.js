@@ -20,7 +20,7 @@ class Lerp {
     
     update() {
         let progress = this.map(this.current, this._current, this.target, 0, 1);
-        this.current = this.current + (this.target - this.current) * SPEED;
+        this.current = this.current + (this.target - this.current) * this.speed;
         if (progress > 0.99) this.dispatchOnce();
     }
     
