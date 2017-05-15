@@ -1,7 +1,7 @@
 {
   "name": "lerp",
   "description": "<h1 align=\"center\">Lib Name</h1> <h3 align=\"center\">Lib Description</h3>",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "build": "NODE_ENV=production webpack -p --config ./webpack.production.config.js --progress --colors",
     "start": "NODE_ENV=dev webpack-dev-server --watch -d --progress --colors"
